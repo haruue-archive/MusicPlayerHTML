@@ -1,3 +1,15 @@
+/*
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* REDROCK-TEAM HOMEWORK 2 (20151018)                          *
+* Design a music player in HTML and CSS                       *
+* Author:    Haruue Icymoon                                   *
+* Time:      Mon Oct 19 17:36:58 CST 2015                     *
+* Website:   http://www.caoyue.com.cn/                        *
+* Test page: http://haruue.azurewebsites.net/Web-2-20151018/  *
+* File:      index.html, player.css                           *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+*/
+
 * {
     font-family: Microsoft YaHei;
     text-shadow: 0px 0px 2px #EEE;
@@ -9,11 +21,13 @@ hr {
     color: #2D588F;
 }
 
-.main {
+#main, #list_window {
     width: 400px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px #555555;
 }
 
-.top, .control, .main_bottom {
+.top, .control, .main_bottom, #list_window, #list_top, #play_list_body {
     width: 400px;
     background-color: #253F60;
 }
@@ -24,18 +38,22 @@ hr {
     border-top-right-radius: 7px;
 }
 
-#logo, #close, #set {
+.logo, .close, #set {
     width: 24px;
     height: 24px;
     position: relative;
     top: 3px;
 }
 
-#logo {
+.logo {
+    float: left;
     left: 3px;
+    background-repeat: no-repeat;
+}
+
+#logo {
     background-image: url("image/icon.png");
     background-position: -20px 3px;
-    float: left;
 }
 
 .title {
@@ -48,7 +66,7 @@ hr {
     left: 3px;
 }
 
-#close {
+.close {
     float: right;
     right: 3px;
     width: 20px;
@@ -66,12 +84,12 @@ hr {
     background-position: 0px, 0px;
 }
 
-#close:hover, #set:hover {
+.close:hover, #set:hover {
     background-position: -18px 0px;
     cursor: pointer;
 }
 
-#close:active, #set:active {
+.close:active, #set:active {
     background-position: -36px 0px;
     cursor: pointer;
 }
@@ -365,4 +383,70 @@ img#album {
 #play_list_button:active {
     background-position: -39px 0px;
     margin-top: 1px;
+}
+
+#list_window {
+    background-color: #253F60;
+    position: relative;
+    top: 2px;
+}
+
+#list_top {
+    padding-top: 3px;
+}
+
+#list_window_icon {
+    margin-top: 3px;
+    margin-left: 3px;
+    background-repeat: no-repeat;
+    background-image: url("image/playlist_logo.png");
+    left: 3px;
+    top: 3px;
+}
+
+#list_window_title {
+    position: relative;
+    float: left;
+    left: 3px;
+}
+
+#play_list_body {
+    position: relative;
+    float: left;
+    color: azure;
+    font-size: 12px;
+    top: -2px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.list {
+    position: relative;
+    float: left;
+    padding-top: 10px;
+    color: #BBBBBB;
+    line-height: 150%;
+}
+
+#play_lists {
+    position: relative;
+    float: left;
+    width: 90px;
+    height: auto;
+    min-height: 100px;
+    background-color: #1F314B;
+    text-align: center;
+    border-bottom-left-radius: 7px;
+}
+
+#play_list_data {
+    position: relative;
+    padding-left: 10px;
+    float: left;
+    left: 10px;
+    width: 290px;
+    height: auto;
+    min-height: 100px;
+    background-color: #1F314B;
+    border-bottom-right-radius: 7px;
 }

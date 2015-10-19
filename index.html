@@ -4,13 +4,24 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="./player.css"/>
     <script type="text/javascript" src="player.js"></script>
+    <!--
+    * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	* REDROCK-TEAM HOMEWORK 2 (20151018)                          *
+	* Design a music player in HTML and CSS                       *
+	* Author:    Haruue Icymoon                                   *
+	* Time:      Mon Oct 19 17:36:58 CST 2015                     *
+	* Website:   http://www.caoyue.com.cn/                        *
+	* Test page: http://haruue.azurewebsites.net/Web-2-20151018/  *
+	* File:      index.html, player.css                           *
+	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+    -->
 </head>
 <body>
 <div id="main">
     <div class="top">
-        <span id="logo"></span>
+        <span id="logo" class="logo"></span>
         <span id="title" class="title">音乐播放器</span>
-        <span id="close"></span>
+        <span id="close" class="close"></span>
         <span id="set"></span>
     </div>
     <div class="control">
@@ -59,7 +70,19 @@
 </div>
 <div id="list_window">
     <div class="top" id="list_top">
-        
+        <span id="list_window_icon" class="logo"></span>
+        <span id="list_window_title" class="title">播放列表</span>
+        <span id="list_window_close" class="close"></span>
+    </div>
+    <div class="play_list_body" id="play_list_body">
+        <div class="list" id="play_lists">
+            <span id="list0" style="color: azure;">[默认列表]</span> <br/>
+        </div>
+        <div class="list" id="play_list_data">
+            <span id="song0" style="color: azure;">井内舞子 - Dear My Friend </span><br/>
+            <span id="song1">井内舞子 - Only My Railgun </span><br/>
+            <span id="song2">川田まみ - See Visions </span><br/>
+        </div>
     </div>
 </div>
 </body>
