@@ -1,0 +1,368 @@
+* {
+    font-family: Microsoft YaHei;
+    text-shadow: 0px 0px 2px #EEE;
+}
+
+hr {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #2D588F;
+}
+
+.main {
+    width: 400px;
+}
+
+.top, .control, .main_bottom {
+    width: 400px;
+    background-color: #253F60;
+}
+
+.top {
+    height: 25px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+#logo, #close, #set {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 3px;
+}
+
+#logo {
+    left: 3px;
+    background-image: url("image/icon.png");
+    background-position: -20px 3px;
+    float: left;
+}
+
+.title {
+    color: azure;
+}
+
+#title {
+    position: relative;
+    float: left;
+    left: 3px;
+}
+
+#close {
+    float: right;
+    right: 3px;
+    width: 20px;
+    height: 20px;
+    background-image: url("image/close.png");
+    background-position: 0px 0px;
+}
+
+#set {
+    float: right;
+    width: 20px;
+    height: 20px;
+    right: 2px;
+    background-image: url("image/set.png");
+    background-position: 0px, 0px;
+}
+
+#close:hover, #set:hover {
+    background-position: -18px 0px;
+    cursor: pointer;
+}
+
+#close:active, #set:active {
+    background-position: -36px 0px;
+    cursor: pointer;
+}
+
+.control {
+    height: 130px;
+}
+
+div.album {
+    position: relative;
+    float: left;
+    margin: 14px;
+    height: 93px;
+    width: 93px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+img#album {
+    height: 100%;
+}
+
+.main_control {
+    position: relative;
+    float: left;
+    margin-top: 14px;
+    margin-right: 14px;
+    margin-left: 0px;
+    margin-bottom: 14px;
+}
+
+#music_name {
+    color: azure;
+    position: relative;
+    left: 10px;
+}
+
+.progress_bar {
+    position: relative;
+    float: left;
+    top: 10px;
+    left: 4px;
+    width: 200px;
+    height: 10px;
+}
+
+.long_progress_bar {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    height: 4px;
+}
+
+#bg_bar, .bg_bar {
+    width: 200px;
+    background-color: #2D588F;
+    box-shadow: 0px 0px 2px #69C0FC;
+    border-radius: 2px;
+    z-index: 3;
+}
+
+#scroll, .scroll {
+    position: relative;
+    float: left;
+    background: #FFF none repeat scroll 0% 0%;
+    top: 6px;
+    left: -6px;
+    height: 12px;
+    width: 12px;
+    border-radius: 100%;
+    z-index: 6;
+}
+
+#scroll:hover, .scroll:hover {
+    cursor: pointer;
+    box-shadow: azure 0 0 2px;
+}
+
+#scroll:active, .scroll:active {
+    cursor: pointer;
+    margin-top: 1px;
+}
+
+#loaded, .loaded {
+    width: 0px;
+    background-color: #88F;
+    border-radius: 2px;
+    z-index: 4;
+}
+
+#played, .played {
+    width: 0px;
+    background-color: #DDF;
+    border-radius: 2px;
+    z-index: 5;
+}
+
+.time_bar {
+    width: 50px;
+    margin-left: -2px;
+    float: left;
+    position: relative;
+    left: 20px;
+    top: 13px;
+    height: 15px;
+    margin-top: 2px;
+}
+
+.time {
+    background-image: url("image/number.bmp");
+    width: 8px;
+    height: 15px;
+    position: relative;
+    float: left;
+    padding-right: 2px;
+    z-index: 5;
+}
+
+.control_music {
+    position: absolute;
+    float: left;
+    left: 25px;
+    top: 65px;
+}
+
+.button {
+    position: relative;
+    float: left;
+    margin-top: -6px;
+}
+
+.button.change {
+    top: 5px;
+    width: 48px;
+    height: 48px;
+}
+
+.button.change:hover {
+    background-position: -45px 0px;
+    cursor: pointer;
+}
+
+.button.change:active {
+    background-position: -45px 0px;
+    cursor: pointer;
+    margin-top: -5px;
+}
+
+.button.play {
+    width: 56px;
+    height: 56px;
+}
+
+.button.play:hover {
+    background-position: -56px 0px;
+    cursor: pointer;
+}
+
+.button.play:active {
+    background-position: -56px 0px;
+    cursor: pointer;
+    margin-top: -5px;
+}
+
+.button#prev {
+    background-image: url("image/prev.png");
+}
+
+.button#play {
+    background-image: url("image/play.png");
+}
+
+.button#pause {
+    background-image: url("image/pause.png");
+}
+
+.button#next {
+    background-image: url("image/next.png");
+}
+
+.button#random {
+    background-image: url("image/mode_05.png");
+}
+
+.main_bottom {
+    height: 30px;
+    padding-top: 5px;
+    z-index: 0;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+#sound_icon {
+    background-image: url("image/mute.bmp");
+    margin-left: 15px;
+    width: 15px;
+    height: 15px;
+    margin-top: 5px;
+    position: relative;
+    float: left;
+    left: 5px;
+}
+
+#sound_icon:hover {
+    background-position: 60px 0px;
+}
+
+#sound_icon:active {
+    margin-top: 6px;
+}
+
+.sound_bar {
+    position: relative;
+    float: left;
+    left: 25px;
+}
+
+#sound_scroll {
+    position: relative;
+    float: left;
+    left: -6px;
+}
+
+#sound_bg_bar {
+    width: 100px;
+}
+
+.list_chooser {
+    position: relative;
+    float: right;
+    background-position: 0px 0px;
+    margin: 0px 2px;
+    height: 20px;
+}
+
+#music_window_button {
+    right: 10px;
+    background-image: url("image/browser.png");
+    width: 49px;
+}
+
+#music_window_button:hover {
+    background-position: -49px 0px;
+}
+
+#music_window_button:active {
+    background-position: -49px 0px;
+    margin-top: 1px;
+}
+
+#lyric_button {
+    right: 10px;
+    background-image: url("image/lyric.png");
+    width: 39px;
+}
+
+#lyric_button:hover {
+    background-position: -39px 0px;
+}
+
+#lyric_button:active {
+    background-position: -39px 0px;
+    margin-top: 1px;
+}
+
+#equalizer_button {
+    right: 10px;
+    background-image: url("image/equalizer.png");
+    width: 39px;
+}
+
+#equalizer_button:hover {
+    background-position: -39px 0px;
+}
+
+#equalizer_button:active {
+    background-position: -39px 0px;
+    margin-top: 1px;
+}
+
+#play_list_button {
+    right: 10px;
+    background-image: url("image/playlist.png");
+    width: 39px;
+}
+
+#play_list_button:hover {
+    background-position: -39px 0px;
+}
+
+#play_list_button:active {
+    background-position: -39px 0px;
+    margin-top: 1px;
+}
