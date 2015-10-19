@@ -16,12 +16,13 @@
 	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
     -->
 </head>
-<body>
+<body onload="renew()">
+<audio id="audio" src="music/dear_my_friend.ogg" preload="auto"></audio>
 <div id="main">
     <div class="top">
         <span id="logo" class="logo"></span>
         <span id="title" class="title">音乐播放器</span>
-        <span id="close" class="close"></span>
+        <span id="close" onclick="quit(event)" class="close"></span>
         <span id="set"></span>
     </div>
     <div class="control">
@@ -45,10 +46,9 @@
             </div>
             <div class="control_music">
                 <span id="prev" class="button change" title="上一首"></span>
-                <span id="play" class="button play" title="播放" style="display: none;"></span>
-                <span id="pause" class="button play" title="暂停" style="display: block"></span>
+                <span id="play" class="button play" onclick="play()" title="播放" style="display: block;"></span>
+                <span id="pause" class="button play" onclick="pause()" title="暂停" style="display: none"></span>
                 <span id="next" class="button change" title="下一首"></span>
-                <span id="random" class="button change" title="随机播放"></span>
             </div>
         </div>
     </div>
@@ -76,12 +76,11 @@
     </div>
     <div class="play_list_body" id="play_list_body">
         <div class="list" id="play_lists">
-            <span id="list0" style="color: azure;">[默认列表]</span> <br/>
+            <span id="list0" class="playlist" style="color: azure;">[默认列表]</span> <br/>
         </div>
         <div class="list" id="play_list_data">
-            <span id="song0" style="color: azure;">井内舞子 - Dear My Friend </span><br/>
-            <span id="song1">井内舞子 - Only My Railgun </span><br/>
-            <span id="song2">川田まみ - See Visions </span><br/>
+            <span id="song0" class="song" style="color: azure;">井内舞子 - Dear My Friend </span><br/>
+            <span id="song1" class="song">川田まみ - See Visions </span><br/>
         </div>
     </div>
 </div>

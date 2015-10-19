@@ -64,6 +64,7 @@ hr {
     position: relative;
     float: left;
     left: 3px;
+    top: 1px;
 }
 
 .close {
@@ -175,7 +176,7 @@ img#album {
 
 #loaded, .loaded {
     width: 0px;
-    background-color: #88F;
+    background-color: #5D88BF;
     border-radius: 2px;
     z-index: 4;
 }
@@ -295,10 +296,12 @@ img#album {
 
 #sound_icon:hover {
     background-position: 60px 0px;
+    cursor: pointer;
 }
 
 #sound_icon:active {
     margin-top: 6px;
+    cursor: pointer;
 }
 
 .sound_bar {
@@ -333,11 +336,13 @@ img#album {
 
 #music_window_button:hover {
     background-position: -49px 0px;
+    cursor: pointer;
 }
 
 #music_window_button:active {
     background-position: -49px 0px;
     margin-top: 1px;
+    cursor: pointer;
 }
 
 #lyric_button {
@@ -348,11 +353,13 @@ img#album {
 
 #lyric_button:hover {
     background-position: -39px 0px;
+    cursor: pointer;
 }
 
 #lyric_button:active {
     background-position: -39px 0px;
     margin-top: 1px;
+    cursor: pointer;
 }
 
 #equalizer_button {
@@ -363,11 +370,13 @@ img#album {
 
 #equalizer_button:hover {
     background-position: -39px 0px;
+    cursor: pointer;
 }
 
 #equalizer_button:active {
     background-position: -39px 0px;
     margin-top: 1px;
+    cursor: pointer;
 }
 
 #play_list_button {
@@ -378,11 +387,13 @@ img#album {
 
 #play_list_button:hover {
     background-position: -39px 0px;
+    cursor: pointer;
 }
 
 #play_list_button:active {
     background-position: -39px 0px;
     margin-top: 1px;
+    cursor: pointer;
 }
 
 #list_window {
@@ -449,4 +460,12 @@ img#album {
     min-height: 100px;
     background-color: #1F314B;
     border-bottom-right-radius: 7px;
+}
+
+.song {
+    cursor: pointer;
+}
+
+.playlist {
+    cursor: pointer;
 }
