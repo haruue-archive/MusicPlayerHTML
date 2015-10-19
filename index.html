@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <title>音乐播放器</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./player.css"/>
+    <script type="text/javascript" src="player.js"></script>
+</head>
+<body>
+<div id="main">
+    <div class="top">
+        <span id="logo"></span>
+        <span id="title" class="title">音乐播放器</span>
+        <span id="close"></span>
+        <span id="set"></span>
+    </div>
+    <div class="control">
+        <div class="album">
+            <img id="album" src="image/album1.jpg"/>
+        </div>
+        <div class="main_control">
+            <div id="music_name" class="title">井内舞子 - Dear My Friend</div>
+            <div class="progress_bar">
+                <span class="long_progress_bar bg_bar" id="bg_bar"></span>
+                <span class="scroll" id="scroll"></span>
+                <span class="long_progress_bar played" id="played"></span>
+                <span class="long_progress_bar loaded" id="loaded"></span>
+            </div>
+            <div class="time_bar">
+                <span id="time1" class="time" style="background-position: 0px 0px;"></span>
+                <span id="time2" class="time" style="background-position: 0px 0px;"></span>
+                <span class="time" style="background-position: 18px 0px;"></span>
+                <span id="time3" class="time" style="background-position: 0px 0px;"></span>
+                <span id="time4" class="time" style="background-position: 0px 0px;"></span>
+            </div>
+            <div class="control_music">
+                <span id="prev" class="button change" title="上一首"></span>
+                <span id="play" class="button play" title="播放" style="display: none;"></span>
+                <span id="pause" class="button play" title="暂停" style="display: block"></span>
+                <span id="next" class="button change" title="下一首"></span>
+                <span id="random" class="button change" title="随机播放"></span>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <div class="main_bottom">
+        <span id="sound_icon"></span>
+        <span class="sound_bar">
+            <span id="sound_bg_bar" class="bg_bar long_progress_bar"></span>
+            <span id="sound_value" class="played long_progress_bar"></span>
+            <span id="sound_scroll" class="scroll"></span>
+        </span>
+        <span class="list_chooser">
+            <span id="music_window_button" class="list_chooser"></span>
+            <span id="lyric_button" class="list_chooser"></span>
+            <span id="equalizer_button" class="list_chooser"></span>
+            <span id="play_list_button" class="list_chooser"></span>
+        </span>
+    </div>
+</div>
+<div id="list_window">
+    <div class="top" id="list_top">
+        
+    </div>
+</div>
+</body>
+</html>
