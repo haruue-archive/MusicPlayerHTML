@@ -3,15 +3,15 @@
 * REDROCK-TEAM HOMEWORK 2 (20151018)                          *
 * Design a music player in HTML and CSS                       *
 * Author:    Haruue Icymoon                                   *
-* Time:      Mon Oct 19 17:36:58 CST 2015                     *
+* Time:      Tue Oct 20 22:42:58 CST 2015                     *
 * Website:   http://www.caoyue.com.cn/                        *
 * Test page: http://haruue.azurewebsites.net/Web-2-20151018/  *
-* File:      index.html, player.css                           *
+* File:      index.html, player.css, player.js                *
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 */
 
 * {
-    font-family: Microsoft YaHei;
+    font-family: 'Microsoft YaHei', 'Droid Sans Fallback', sans-serif;
     text-shadow: 0px 0px 2px #EEE;
 }
 
@@ -294,12 +294,23 @@ img#album {
     left: 5px;
 }
 
-#sound_icon:hover {
-    background-position: 60px 0px;
+#mute_sound_icon {
+    background-image: url("image/mute.bmp");
+    background-position: 30px 0px;
+    margin-left: 15px;
+    width: 15px;
+    height: 15px;
+    margin-top: 5px;
+    position: relative;
+    float: left;
+    left: 5px;
+}
+
+#sound_icon:hover, #mute_sound_icon:hover {
     cursor: pointer;
 }
 
-#sound_icon:active {
+#sound_icon:active, #mute_sound_icon:active {
     margin-top: 6px;
     cursor: pointer;
 }
@@ -313,7 +324,11 @@ img#album {
 #sound_scroll {
     position: relative;
     float: left;
-    left: -6px;
+    left: 96px;
+}
+
+#sound_value {
+    width: 100px;
 }
 
 #sound_bg_bar {

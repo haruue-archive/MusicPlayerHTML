@@ -9,14 +9,14 @@
 	* REDROCK-TEAM HOMEWORK 2 (20151018)                          *
 	* Design a music player in HTML and CSS                       *
 	* Author:    Haruue Icymoon                                   *
-	* Time:      Mon Oct 19 17:36:58 CST 2015                     *
+	* Time:      Tue Oct 20 22:42:58 CST 2015                     *
 	* Website:   http://www.caoyue.com.cn/                        *
 	* Test page: http://haruue.azurewebsites.net/Web-2-20151018/  *
-	* File:      index.html, player.css                           *
+	* File:      index.html, player.css, player.js                *
 	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
     -->
 </head>
-<body onload="renew()">
+<body onload="renew()" onmousemove="move(event)" onmouseup="mouseUp()">
 <audio id="audio" src="music/dear_my_friend.ogg" preload="auto"></audio>
 <div id="main">
     <div class="top">
@@ -32,10 +32,9 @@
         <div class="main_control">
             <div id="music_name" class="title">井内舞子 - Dear My Friend</div>
             <div class="progress_bar">
-                <span class="long_progress_bar bg_bar" id="bg_bar"></span>
-                <span class="scroll" id="scroll"></span>
-                <span class="long_progress_bar played" id="played"></span>
-                <span class="long_progress_bar loaded" id="loaded"></span>
+                <span class="long_progress_bar bg_bar" id="bg_bar" onmousedown="onMouseDown(0)"></span>
+                <span class="scroll" id="scroll" onmousedown="onMouseDown(0)"></span>
+                <span class="long_progress_bar played" id="played" onmousedown="onMouseDown(0)"></span>
             </div>
             <div class="time_bar">
                 <span id="time1" class="time" style="background-position: 0px 0px;"></span>
@@ -54,11 +53,12 @@
     </div>
     <hr/>
     <div class="main_bottom">
-        <span id="sound_icon"></span>
+        <span id="sound_icon" onclick="checkMute()" style="display: block"></span>
+        <span id="mute_sound_icon" onclick="noMute()" style="display: none"></span>
         <span class="sound_bar">
-            <span id="sound_bg_bar" class="bg_bar long_progress_bar"></span>
-            <span id="sound_value" class="played long_progress_bar"></span>
-            <span id="sound_scroll" class="scroll"></span>
+            <span id="sound_bg_bar" class="bg_bar long_progress_bar" onmousedown="onMouseDown(1)"></span>
+            <span id="sound_value" class="played long_progress_bar" onmousedown="onMouseDown(1)"></span>
+            <span id="sound_scroll" class="scroll" onmousedown="onMouseDown(1)"></span>
         </span>
         <span class="list_chooser">
             <span id="music_window_button" class="list_chooser" style="display: none"></span>
