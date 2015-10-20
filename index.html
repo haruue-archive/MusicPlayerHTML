@@ -27,7 +27,7 @@
     </div>
     <div class="control">
         <div class="album">
-            <img id="album" src="image/album1.jpg"/>
+            <img id="album" src="image/album0.jpg"/>
         </div>
         <div class="main_control">
             <div id="music_name" class="title">井内舞子 - Dear My Friend</div>
@@ -45,10 +45,10 @@
                 <span id="time4" class="time" style="background-position: 0px 0px;"></span>
             </div>
             <div class="control_music">
-                <span id="prev" class="button change" title="上一首"></span>
+                <span id="prev" class="button change" onclick="prevMusic()" title="上一首"></span>
                 <span id="play" class="button play" onclick="play()" title="播放" style="display: block;"></span>
                 <span id="pause" class="button play" onclick="pause()" title="暂停" style="display: none"></span>
-                <span id="next" class="button change" title="下一首"></span>
+                <span id="next" class="button change" onclick="nextMusic()" title="下一首"></span>
             </div>
         </div>
     </div>
@@ -61,26 +61,27 @@
             <span id="sound_scroll" class="scroll"></span>
         </span>
         <span class="list_chooser">
-            <span id="music_window_button" class="list_chooser"></span>
+            <span id="music_window_button" class="list_chooser" style="display: none"></span>
             <span id="lyric_button" class="list_chooser"></span>
-            <span id="equalizer_button" class="list_chooser"></span>
-            <span id="play_list_button" class="list_chooser"></span>
+            <span id="equalizer_button" class="list_chooser" style="display: none"></span>
+            <span id="play_list_button" class="list_chooser" onclick="noList()"></span>
         </span>
     </div>
 </div>
-<div id="list_window">
+<div id="list_window" style="display: block;">
     <div class="top" id="list_top">
         <span id="list_window_icon" class="logo"></span>
         <span id="list_window_title" class="title">播放列表</span>
-        <span id="list_window_close" class="close"></span>
+        <span id="list_window_close" class="close" onclick="noList()"></span>
     </div>
     <div class="play_list_body" id="play_list_body">
         <div class="list" id="play_lists">
             <span id="list0" class="playlist" style="color: azure;">[默认列表]</span> <br/>
         </div>
         <div class="list" id="play_list_data">
-            <span id="song0" class="song" style="color: azure;">井内舞子 - Dear My Friend </span><br/>
-            <span id="song1" class="song">川田まみ - See Visions </span><br/>
+            <span id="song0" onclick="changeMusic(0)" class="song"
+                  style="color: azure;">井内舞子 - Dear My Friend </span><br/>
+            <span id="song1" onclick="changeMusic(1)" class="song">川田まみ - See Visions </span><br/>
         </div>
     </div>
 </div>
