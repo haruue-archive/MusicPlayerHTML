@@ -43,7 +43,7 @@ function pause() {
 
 function renew() {
     var audio = document.getElementById("audio");
-    var loaded = document.getElementById("loaded")
+    var loaded = document.getElementById("loaded");
     var played = document.getElementById("played");
     var scroll = document.getElementById("scroll");
     var time1 = document.getElementById("time1");
@@ -79,7 +79,6 @@ function changeMusic(id) {
     document.getElementById("song" + currentPlay).style.color = "#BBBBBB";
     document.getElementById("song" + id).style.color = "azure";
     currentPlay = id;
-    audio
     play();
 }
 
